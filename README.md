@@ -1,5 +1,4 @@
 ```java
-package com.samy.calcengine;
 
 public class MathEquation {
     private double leftVal;
@@ -41,7 +40,6 @@ public class MathEquation {
 ```
 
 ```java
-package com.samy.calcengine;
 
 public class Main {
 
