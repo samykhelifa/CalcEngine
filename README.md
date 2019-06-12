@@ -1,9 +1,8 @@
 
 ```java
-public class MathEquation {
-   public class Main {
 
-    public static void main(String[] args) {
+   public class Main {
+      public static void main(String[] args) {
         MathEquation[] equations = new MathEquation[4];
         equations[0] = new MathEquation('d', 100.0d, 50.0d);
         equations[1] = new MathEquation('a', 25.0d, 92.0d);
@@ -113,3 +112,4 @@ public class MathEquation {
 
 
 
+ 
