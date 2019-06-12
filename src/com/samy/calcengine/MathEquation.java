@@ -3,55 +3,48 @@ package com.samy.calcengine;
 public class MathEquation {
     private double leftVal;
     private double rightVal;
-    private char opCode;
+    private char opCode = 'a';
     private double result;
 
-    // Constructors
+    public double getLeftVal() {return leftVal;}
+    public void setLeftVal(double leftVal) {this.leftVal = leftVal;}
+    public double getRightVal() {return rightVal;}
+    public void setRightVal(double rightVal) {this.rightVal = rightVal;}
+    public char getOpCode() {return opCode;}
+    public void setOpCode(char opCode) {this.opCode = opCode;}
 
-    public MathEquation() {
-    }
+    public double getResult() { return result;}
+
+    public MathEquation() {}
+
     public MathEquation(char opCode) {
-       // this();
         this.opCode = opCode;
     }
-    public MathEquation(char opCode,double leftVal,double rightVal) {
-        this( opCode);
-        this.leftVal=leftVal;
-        this.rightVal=rightVal;
-    }
 
-
-
-    public double getLeftVal() {
-        return leftVal;
-    }
-
-    public void setLeftVal(double leftVal) {
+    public MathEquation(char opCode, double leftVal, double rightVal) {
+        this(opCode);
         this.leftVal = leftVal;
-    }
-
-    public double getRightVal() {
-        return rightVal;
-    }
-
-    public void setRightVal(double rightVal) {
         this.rightVal = rightVal;
     }
 
-    public char getOpCode() {
-        return opCode;
+    public void execute(double leftVal, double rightVal) {
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+
+        execute();
     }
 
-    public void setOpCode(char opCode) {
-        this.opCode = opCode;
-    }
+    public void execute(int leftVal, int rightVal) {
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
 
-    public double getResult() {
-        return result;
+        execute();
+
+        result = (int)result;
     }
 
     public void execute() {
-        switch (opCode) {
+        switch(opCode) {
             case 'a':
                 result = leftVal + rightVal;
                 break;
