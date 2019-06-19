@@ -1,5 +1,6 @@
 package com.samy.calcengine;
 
+
 public class MathEquation {
     private double leftVal;
     private double rightVal;
